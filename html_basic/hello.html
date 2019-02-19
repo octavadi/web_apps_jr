@@ -1,12 +1,336 @@
 <!DOCTYPE html>
+<!-- Tulisan <!doctype html> di atas harus dituliskan pada baris pertama dokumen html sebagai informasi bagi mesin (browser) bahwa dokumen ini merupakan dokumen html sehingga harus dibaca dan diperlakukan sebagai dokumen html. Bagian tersebut disebut document type declaration -->
+<!--Jangan lupa menyimpan file ini dengan extension .html -->
+
 <html lang="en">
+<!-- sebelah kiri ini merupakan tag html pembuka -->
+
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Dokumen html tentang html">
+  <meta name="keywords" content="HTML,tutorials">
+  <meta name="author" content="Adi W. Octavianto">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Basic HTML</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>HTML Dasar</title>
+  <!--Saat file ini dibuka via browser tulisan diantara tag title akan muncul di bagian atas tab halaman web -->
 </head>
+
 <body>
-Hello World, Hello Again
+  <!-- Simbol diujung kiri dan kanan bagian ini digunakan untuk menuliskan komentar/catatan penjelasan mengenai bagian-bagian kode tertentu di dalam dokumen html.-->
+  <!-- Bagian yang dijadikan komentar tidak akan dibaca oleh komputer karena dianggap pesan yang diperuntukkan bagi manusia saja -->
+
+  Hello World, Hello Again. <br> Buka (open) file ini dengan code editor seperti ATOM,Visual Studio Code atau Sublime<br><br>
+  <!--Perhatikan rangkaian tulisan di atas! Terdapat tag <br> yang berarti "break line". Tag tersebut digunakan untuk memerintahkan browser menampilkan tulisan/elemen yang ada di sebelah tag <br> pada baris baru -->
+
+  Manakala file itu dibuka oleh perangkat lunak code editor, Anda dapat melihat isi file dokumen html yang berisi perintah-perintah html. Perintah-perintah html dinamakan tag dan selalu ditulis dengan ciri diapit simbol sebagai berikut &lt;
+  &gt;. <br><br>Ada dua jenis tag dalam html, yaitu tag tunggal dan tag berpasangan. Contoh tag tunggal misalnya &lt;br&gt;. Sedangkan contoh tag berpasangan misalnya &lt;p&gt; simbol tag di sebelah kiri adalah tanda tag pembuka, sementara di
+  sebelah kanan paling ujung akhir dari baris kalimat ini adalah tag penutup. Di antara kedua tag pembuka dan penutup dapat dituliskan elemen web yang diatur oleh kedua tag tersebut &lt;/p&gt;<br><br>
+
+  Pada code editor biasanya terdapat keterangan nomer baris di sisi kiri laman editing dokumen. Nomor baris tersebut menjadi rujukan para penulis kode ketika mendiskusikan isi dokumen html atau file kode program lain<br><br> Sekarang mari kita bedah
+  bagian-bagian yang tertulis dalam dokumen html namun tidak terlihat secara visual melalui browser.<br><br>
+
+  Baris ke-1 adalah deklarasi bahwa file ini merupakan dokumen html versi terbaru. Anda dapat membaca informasi lebih dalam mengenai deklarasi ini di bagian komentar yang ditulis dalam dokumen html. Anda perlu membuka file ini dengan code editor
+  terlebih dahulu<br><br>
+
+  Baris ke-2 &lt;html&gt; adalah tag penanda awal mulainya dokumen html seperti yang dinyatakan pada baris pertama. Dokumen html tersebut berakhir sampai pada baris yang ditandai dengan tag &lt;/html&gt;
+
+  <!-- selain tag <br> penataan elemen teks dalam dokumen html juga dapat diatur dengan tag <p> </p>. Tag tersebut untuk menandai suatu bagian dokumen html sebagai paragraf. Naskah yag ditandai dengan tag <p> </p> otomatis akan diberi ruang spasi di bawahnya. Mari kita lihat contoh penggunaan tag tersebut di bawah ini -->
+  <p>
+    Di dalam tag &lt;html&gt &lt;/html&gt; terdapat dua bagian utama, yaitu head dan body.
+    <pre>
+    &lt;head&gt;
+    Isi bagian yang diapit tag head biasanya diisi dengan meta data dokumen web. Meta data adalah informasi yang hanya diperuntukkan bagi browser mengenasi aspek teknis dan spesifikasi dokumen html yang terkait. Bagian ini tidak akan ditampilkan secara visual oleh browser.<br>
+    Bagian head yag biasanya tidak terlewatkan untuk diisi adalah:
+    &lt;title&gt; Judul laman web yang akan ditampilkan di tab browser&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    Elemen-elemen web yang dituliskan diantara tag pemuka dan penutup body akan dibaca dan dirender oleh browser menjadi tampilan visual atau bahkan audio.
+    &lt;/body&gt;
+    </pre>
+  </p>
+
+  <p>Berikutnya terdapat tag  &lt;h&gt; yang digunakan untuk menandai bagian dokumen yang memiliki peran/fungsi penting sebagai judul atau headline dokumen.</p>
+  <p>h1 menandai bagian yang menjadi prioritas pertama atau level judul pertama. makin besar nomer yang mengikuti tag h berarti makin berkurang level penting / penekanan bagian itu sebagai judul/headline</p>
+
+  <p> Tampilan hasil dari penggunaan tag h <br>
+    <h1>Judul Level 1</h1>
+    <h2>Judul Level 2</h2>
+    <h3>Judul Level 3</h3>
+    <h4>Judul Level 4</h4>
+    <h5>Judul Level 5</h5>
+    <h6>Judul Level 6</h6>
+    <p>Apa yang terjadi jika kita menggunakan tag h lebih dari 6 tingkat?</p>
+    <h7>Judul</h7>
+    <h8>Judul</h8>
+    <h9>Judul</h9>
+    <h10>Judul</h10>
+    <br><br>
+  </p>
+  <!-- dapat dilihat bahwa heading 7 dan 8 tidak ada perubahan, ini berarti tingkatan heading yang dapat diproses oleh browser hanya sampai 6 saja -->
+
+  <p> Memasukkan elemen multimedia ke dalam dokumen html / laman web.</p>
+  <p>
+    Elemen multimedia seperti gambar(image), suara, dan video harus disimpan sebagai file terpisah. Untuk menampilkannya sebagai bagian dari laman web, kita harus memanggilnya dari tempat file multimedia tersebut berada.
+  </p>
+
+  <p>
+    Penting untuk diperhatikan disini untuk menuliskan lokasi (url) dan nama file yang akan dipanggil secara akurat termasuk penggunaan huruf kapital dan non kapital
+  </p>
+  <p>
+    Berikut contoh tag untuk memanggil file gambar diam agar ditampilkan pada bagian bawah kalimat ini
+  </p>
+  <!-- tag untuk memanggil file gambar adalah img. Tag tersebut harus selalu diikuti oleh operator src yang berarti source. Operator src digunakan untuk memberikan informasi kepada browser mengenai sumber gambar (image) yang akan kita panggil. Keterangan dalam src harus selalu diapit oleh tanda " ". Jika lokasi file gambar berada dalam folder yang sama dengan file html ini, maka nama folder tidak perlu dituliskan. Kita dapat langsung menuliskan nama file gambar yang ingin ditampilkan. Operator alt digunakan untuk memerintahkan browser agar menampilkan alternatif informasi berupa tulisan seperti yang kita tentukan apabila file gambar yang kita panggil ternyata tidak dapat ditemukan/ditampilkan -->
+  <img src="car.jpeg" alt="mobil balap"> <br>
+  <!--Contoh di bawah ini adalah bentuk perintah html apabila kita ingin memanggil file gambar yang letaknya berada dalam sub folder satu tingkat lebih dalam daripada lokasi file html ini. Coba ubah nama file gambar menjadi penamaan yang tepat sesuai dengan nama file gambar dalam sub folder image agar gambar dapat ditemukan oleh browser-->
+  <p>Pada contoh kedua pemanggilan gambar ini seharusnya gambar tidak keluar dan digantikan oleh alternatif teks. Terdapat kesalahan penulisan URL yang harus diperbaiki terlebuh dahulu agar gambar dapat muncul di halaman ini.</p>
+  <img src="image/mobilBalap.jpeg" alt="Ini adalah alternative text yang memberikan informasi bahwa seharusnya terdapat gambar dua mobil di garis start pada bagian ini" width="400px" height="300px"> <br><br>
+
+  <p>Berikutnya adalah contoh pemanggilan gambar yang lokasinya berada di jaringan Internet</p>
+  <img src="https://i2.wp.com/mugscope.id/wp-content/uploads/2016/11/IMG_2148.jpg" alt="" width="800px" height="600px">
+  <br><br>
+
+  <p>Kemudian di bawah ini adalah hasil embeded tampilan video yang diambil langsung dari youtube. Kode Embeded dapat diperoleh dari situs youtube.</p>
+  <!--Berikut di bawah ini adalah tag html untuk menyisipkan video yang berasal dari situs youtube agar dapat tampil dalam laman web yang kita buat -->
+  <iframe width="460" height="315" src="https://www.youtube.com/embed/eMy2Qbq-mBQ" frameborder="3" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!--Mission untuk anda! Cari tahu di situs referensi seperti W3School, bagaimana cara memasukkan / memanggil dan memutar file audio dan juga video yang disimpan dalam sub folder di komputer server yang kita pakai? Cobakan temuan anda di bawah ini-->
+  <br><br>
+  <p>Selain dapat memuat teks biasa, kita juga dapat memerintahkan browser untuk menjadikan suatu bagian teks atau elemen web lain menjadi kaitan (anchor) hyperlink menuju dokumen html lain.</p>
+  <p>Perintah untuk membuat hyperlink diawali dengan tag a (anchor) yang kemudian diikuti dengan operator href (hyperlink reference). Ketentuan penulisan lokasi file yang akan kita panggil sama dengan ketentuan memanggil file gambar yang telah kita
+    bahas di atas.</p>
+  <a href="hello2.html">ini link menuju hello2</a>
+  <p>Cari tahu lebih banyak mengenai variasi penggunaan tag a href di situs w3school, lalu cobakan variasi-variasi tersebut</p>
+
+  <p> Dalam proses perancangan laman web kadang kita butuh mengisikan teks untuk memberikan gambaran rancangan bentuk akhir dari laman web kita. Lorem generator dapat kita manfaatkan untuk membuat rangkaian kalimat lorem sebagai dummy konten teks
+    untuk laman web kita</p>
+  <p>Lorem generator tersedia pada situs-situs yang dapat dicari via google search. Bisa juga menggunakan fasilitas yang tersedia pada packages emmet jika anda menggunakan ATOM atau Visual Studio Code.<br>Tenetur reprehenderit vel explicabo eveniet
+    at, dolores enim cumque facere fugiat, provident suscipit non. Quos voluptatibus culpa accusamus libero dicta iusto odio, modi corporis quisquam, magni quasi veniam, rerum porro cum a natus labore aut. Labore ad odit illum debitis omnis
+    voluptatem!</p>
+
+  <!-- Reminder : <p> </p> adalah tag untuk menandai suatu bagian dokumen sebagai paragraf -->
+
+  <hr> <!-- tag ini menandai horizontal rule dapat digunakan untuk memisahkan dua pokok bagian dokumen yang berbeda tema -->
+
+  <!-- Reminder : tag <br> atau break digunakan untuk menandai akhir baris suatu bagian dan bagian berikutnya akan ditempatkan pada baris baru -->
+
+  <p>
+    Berikutnya adalah cara membuat list pada laman web. Terdapat dua jenis list, yaitu:
+    <ol>
+      <li>Unordered list</li>
+      <li>Ordered list</li>
+    </ol>
+
+  </p>
+  <p>Di bawah ini adalah contoh unordered list</p>
+  <ul>
+    <!-- unordered list-->
+    <li>list pertama</li>
+    <li>list kedua</li>
+    <li>list ketiga</li>
+    <li>list keempat</li>
+    <li>list kelima</li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <p>Sedangkan yang berikut adalah ordered list.</p>
+  <ol>
+    <!-- ordered list -->
+    <li>list pertama</li>
+    <li>list kedua</li>
+    <li>list ketiga</li>
+    <li>list keempat</li>
+    <li>list kelima</li>
+  </ol>
+  <p>Penomeran ordered list dapat kita atur nomor awalnya tidak harus selalu mulai dari angka 1.</p>
+  <ol start="110">
+    <!-- ordered list -->
+    <li>list pertama</li>
+    <li>list kedua</li>
+    <li>list ketiga</li>
+    <li>list keempat</li>
+    <li>list kelima</li>
+  </ol>
+
+  <!--Berikut adalah tag untuk menandai suatu bagian dokumen web sebagai pasangan istilah dan deskripsinya. Tag <dl> menandai suatu bagian sebagai description list. Tag tersebut selalu digunakan berdampingan dengan tag <dt> (defines terms/names) untuk menandai istilah yang akan dideskripsikan lalu bagian deskripsinya sendiri diapit tag <dd> (description). -->
+  <dl>
+    <!-- tag pembuka description list -->
+    <dt>
+      <!-- Tag pembuka description terms/names -->
+      Description List (istilah yang akan dideskripsikan)
+    </dt>
+    <!--Tag penutup description terms -->
+    <dd>
+      <!-- Tag pembuka description -->
+      Description list biasanya digunakan untuk menandai pasangan data misalnya pertanyaan dengan jawabannya atau istilah dengan defeinisinya. tag ini untuk menandai deskripsinya sedangkan tag dt untuk menandai istilah/pertanyaan
+    </dd> <!-- Tag pnutup description -->
+    <dt>Istilah kedua</dt>
+    <dd>Definisi istilah kedua adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus impedit necessitatibus dolorem incidunt, consequuntur exercitationem non deleniti possimus hic enim aliquam. Dolorum adipisci veniam obcaecati
+      totam voluptatibus sunt, hic voluptatem excepturi ad labore facere error quam nisi libero odit consequuntur perspiciatis, reiciendis at iste ut officia! Qui amet, magni dolor!</dd>
+  </dl><!-- tag penutup description list -->
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum error enim eaque voluptatibus suscipit iusto fugiat obcaecati similique tenetur nihil provident impedit debitis nemo ab, accusamus reprehenderit accusantium voluptates, aliquid
+    quam maiores incidunt vero a explicabo ducimus quaerat! Sint aut recusandae praesentium ex, amet fugit nostrum maxime, maiores vitae. Repellendus!</p>
+  <blockquote>
+    <p>INI ADALAH BAGIAN UNTUK MENANDAI KUTIPAN PANJANG! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus natus et ullam veniam illo quaerat saepe nesciunt deleniti possimus aliquid reprehenderit, iure. Ad architecto, modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit delectus earum nesciunt molestiae? Libero similique, porro sunt earum dignissimos officiis recusandae perspiciatis aperiam odit assumenda velit autem minus nemo, nihil est atque
+      tenetur soluta animi magni quos. Ratione praesentium repellendus ab, deleniti et, suscipit deserunt labore fuga accusamus natus voluptatibus?</p>
+  </blockquote>
+
+  <q>short quotation</q>
+  <pre>
+  bagian ini disebut pre-formated text,
+      maksudnya ruang kosong atau ganti baris dalam kode akan ditampilkan
+
+
+                       apa adanya
+</pre>
+  <p>bagian ini disebut pre-formated text, maksudnya ruang kosong atau
+
+
+    ganti baris dalam kode akan ditampilkan
+
+
+    apa adanya
+  </p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit labore fugiat laudantium nihil. Libero dolor consequatur cupiditate expedita accusamus, at distinctio quas obcaecati maxime maiores dignissimos, soluta earum repellendus atque optio
+    praesentium accusantium assumenda voluptate ipsam nulla, quam sint numquam quis necessitatibus architecto! Dolorum tenetur amet, porro eveniet dignissimos ipsa laborum odio recusandae error possimus sapiente deserunt, laudantium magni debitis
+    distinctio tempora accusantium, unde facere asperiores. Incidunt distinctio perspiciatis sapiente mollitia ab eligendi ullam dignissimos aliquam similique, perferendis libero modi, delectus, molestias ex veniam eos nostrum. Aliquam, esse nemo
+    dolorem, architecto error mollitia, eaque laboriosam accusamus consequatur facilis consequuntur ex?</p>
+  <figure>
+    <img src="image/Struktur_file_tree.png" alt="Gambar struktur folder dan file suatu server web">
+    <figcaption>fig 1. Ini adalah ilustrasi struktur pohon folder dan file pada suatu server web.</figcaption>
+  </figure>
+
+  <section id="bagian1">
+    <hgroup>
+      <h1>Thematic group of content</h1>
+      <h2>Definisi</h2>
+    </hgroup>
+    <p>Fungsinya untuk memilah-milah dokumen web yang panjang menjadi beberapa bagian dengan tema-tema bagian yang spesifik</p>
+
+    <article>
+      <h2>Artikel 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa non, quos odit explicabo. Nisi labore eveniet iste, voluptatem, ab natus praesentium ex optio, assumenda mollitia voluptatibus. Aliquam illum nemo praesentium
+        consequuntur quasi ipsum neque dolorum tempore quia accusantium soluta sapiente obcaecati aperiam magni, deserunt et fugiat veritatis, saepe facere labore alias repudiandae animi. Ducimus ipsum enim incidunt a dicta, quo debitis ullam vero
+        laborum, officiis quia suscipit in, atque esse iusto asperiores itaque. Sapiente voluptate fuga sed nobis laboriosam suscipit eaque repudiandae doloribus corrupti maxime. Corporis aliquam distinctio optio numquam, omnis vitae doloribus
+        doloremque iusto illum eaque enim alias veritatis reiciendis magnam eos nobis nemo officia, id voluptatem tenetur similique eum quam iure rerum! Quibusdam et molestias molestiae architecto sint id sequi sapiente. Odit cum, quasi, ducimus
+        explicabo doloribus architecto, quas vel similique incidunt dolorum eaque soluta harum. Asperiores placeat maiores porro veniam obcaecati tenetur accusamus dolore magni nemo!</p>
+    </article>
+    <article>
+      <h2>Artikel 2</h2>
+    </article>
+  </section>
+
+
+  <article>
+    <h1>Self-contained, reusable composition</h1>
+    <section> bagian 1 </section>
+    <section> bagian 2 </section>
+
+    <aside> related material yang dapat dianggap terpisah atau tidak langsung terikat dari bagian lain </aside>
+
+    <nav> Tag untuk menandai suatu bagian sebagai area menu navigasi.</nav>
+  </article>
+  <br>
+  <em>menandai bagian teks yang perlu penekanan khusus. Fungsi utama bukan hanya tampilan visual khusus tapi juga agar mesin (browser) tahu bahwa bagian ini memerlukan perhatian/penekanan khusus. Berfungsi misalnya sebagai penanda bagi aplikasi screen reader</em>
+  <br><br>
+  <strong>Strong importance</strong>
+
+  <div></div> <!-- division adalah generic element untuk menandai suatu bagian khusus konten. dapat diberi id atau class khusus agar dapat dikenali dengan mudah sebagai obyek perintah css atau javascript -->
+
+  <div class="kelas">
+    <p>class untuk menandai beberapa elemen yang dapat dikelompokkan dalam kategori tertentu. Class dapat digunakan terhadap lebih dari satu elemen dalam laman web yang sama</p.>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quis dolorum eligendi explicabo ad nisi sint fugit esse laboriosam, temporibus architecto nostrum delectus quasi dignissimos aut modi vel consequatur nam reprehenderit,
+        exercitationem rerum sequi voluptatum quas? Deserunt dolorum officiis ex eum ipsam consectetur unde error odit quaerat perspiciatis veritatis libero facere voluptas hic sunt, dolor molestiae maxime illo labore inventore sapiente a possimus
+        necessitatibus. Ad aspernatur accusantium ipsum deleniti alias labore blanditiis nostrum ut expedita iste maxime molestias sapiente possimus cupiditate, rem nulla officia tenetur, suscipit temporibus eaque et neque voluptatum obcaecati?
+        Tempore voluptates placeat explicabo consequuntur molestias similique, totam, dolor optio assumenda quas laudantium cumque ullam fuga molestiae expedita? In corrupti tenetur eum nam qui. Accusantium ipsum dolore alias provident, minus labore
+        officiis quis ducimus suscipit necessitatibus beatae, totam hic, voluptatem adipisci eligendi consequuntur consectetur eos expedita, pariatur laudantium. Quae officia necessitatibus deserunt aut hic, eius magnam maiores repudiandae.</p>
+  </div>
+
+  <div id="kelas"> id untuk menandai satu elemen spesifik agar memiliki identitas khusus yang dapat dirujuk oleh perintah-perintah lain dalam dokumen web, misalnya perintah css dan javascript</div>
+  <br>
+  <br>
+
+  <article id="hyperlinks">
+    <h2>Penggunaan links (tautan)</h2>
+    <p>Links / tautan adalah fasilitas dasar sekaligus kekuatan utama laman web. Fasilitas link membuat laman web memiliki kemampuan untuk memanggil (komponen) atau bahkan berpindah dari satu laman ke laman lain, baik laman/komponen yang berasal
+      dari
+      situs lain, dari situs lain, bahkan dari dalam laman aktif itu sendiri. Perintah/tag untuk membuat link/tautan adalah anchor &lta&gt.</p>
+    <p>
+      Berikut adalah beberapa contoh penerapan link:<br>
+      <a href="http://mugscope.id" target="_blank">Link ini menuju laman mugscope.id</a><br>
+      <!-- tulisan atau gambar yang ditempatkan diantara tag a pembuka dan penutup akan menjadi hyperlink -->
+      <a href="http://mugscope.id" target="_blank"><img src="image/Struktur_file_tree.png" alt="Gambar struktur folder dan file"></a>
+
+    </p>
+  </article>
+
+  <div class="tabel">
+    <h2>HTML Table</h2>
+
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+      </tr>
+      <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+      </tr>
+      <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+      </tr>
+    </table>
+  </div>
+  <!--Ending of div class="tabel" -->
+
+  <footer>
+    <address>contact information</address>
+  </footer>
+
+
 </body>
+
 </html>
