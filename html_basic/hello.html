@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- Tulisan <!doctype html> di atas harus dituliskan pada baris pertama dokumen html sebagai informasi bagi mesin (browser) bahwa dokumen ini merupakan dokumen html sehingga harus dibaca dan diperlakukan sebagai dokumen html. Bagian tersebut disebut document type declaration -->
+
 <!--Jangan lupa menyimpan file ini dengan extension .html -->
 
-<html lang="en">
+<html>
 <!-- sebelah kiri ini merupakan tag html pembuka -->
 
 <head>
@@ -11,7 +12,9 @@
   <meta name="keywords" content="HTML,tutorials">
   <meta name="author" content="Adi W. Octavianto">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/styles.css">
+
   <title>HTML Dasar</title>
   <!--Saat file ini dibuka via browser tulisan diantara tag title akan muncul di bagian atas tab halaman web -->
 </head>
@@ -20,7 +23,9 @@
   <!-- Simbol diujung kiri dan kanan bagian ini digunakan untuk menuliskan komentar/catatan penjelasan mengenai bagian-bagian kode tertentu di dalam dokumen html.-->
   <!-- Bagian yang dijadikan komentar tidak akan dibaca oleh komputer karena dianggap pesan yang diperuntukkan bagi manusia saja -->
 
-  Hello World, Hello Again. <br> Buka (open) file ini dengan code editor seperti ATOM,Visual Studio Code atau Sublime<br><br>
+Hai ini perubahan instant di browser
+  <br><br>
+  Hello World, Hello Again. Halo juga<br> Buka (open) file ini dengan code editor seperti ATOM,Visual Studio Code atau Sublime<br><br>
   <!--Perhatikan rangkaian tulisan di atas! Terdapat tag <br> yang berarti "break line". Tag tersebut digunakan untuk memerintahkan browser menampilkan tulisan/elemen yang ada di sebelah tag <br> pada baris baru -->
 
   Manakala file itu dibuka oleh perangkat lunak code editor, Anda dapat melihat isi file dokumen html yang berisi perintah-perintah html. Perintah-perintah html dinamakan tag dan selalu ditulis dengan ciri diapit simbol sebagai berikut &lt;
@@ -82,9 +87,11 @@
     Berikut contoh tag untuk memanggil file gambar diam agar ditampilkan pada bagian bawah kalimat ini
   </p>
   <!-- tag untuk memanggil file gambar adalah img. Tag tersebut harus selalu diikuti oleh operator src yang berarti source. Operator src digunakan untuk memberikan informasi kepada browser mengenai sumber gambar (image) yang akan kita panggil. Keterangan dalam src harus selalu diapit oleh tanda " ". Jika lokasi file gambar berada dalam folder yang sama dengan file html ini, maka nama folder tidak perlu dituliskan. Kita dapat langsung menuliskan nama file gambar yang ingin ditampilkan. Operator alt digunakan untuk memerintahkan browser agar menampilkan alternatif informasi berupa tulisan seperti yang kita tentukan apabila file gambar yang kita panggil ternyata tidak dapat ditemukan/ditampilkan -->
+
   <img src="car.jpeg" alt="mobil balap"> <br>
   <!--Contoh di bawah ini adalah bentuk perintah html apabila kita ingin memanggil file gambar yang letaknya berada dalam sub folder satu tingkat lebih dalam daripada lokasi file html ini. Coba ubah nama file gambar menjadi penamaan yang tepat sesuai dengan nama file gambar dalam sub folder image agar gambar dapat ditemukan oleh browser-->
   <p>Pada contoh kedua pemanggilan gambar ini seharusnya gambar tidak keluar dan digantikan oleh alternatif teks. Terdapat kesalahan penulisan URL yang harus diperbaiki terlebuh dahulu agar gambar dapat muncul di halaman ini.</p>
+
   <img src="image/mobilBalap.jpeg" alt="Ini adalah alternative text yang memberikan informasi bahwa seharusnya terdapat gambar dua mobil di garis start pada bagian ini" width="400px" height="300px"> <br><br>
 
   <p>Berikutnya adalah contoh pemanggilan gambar yang lokasinya berada di jaringan Internet</p>
@@ -99,7 +106,10 @@
   <p>Selain dapat memuat teks biasa, kita juga dapat memerintahkan browser untuk menjadikan suatu bagian teks atau elemen web lain menjadi kaitan (anchor) hyperlink menuju dokumen html lain.</p>
   <p>Perintah untuk membuat hyperlink diawali dengan tag a (anchor) yang kemudian diikuti dengan operator href (hyperlink reference). Ketentuan penulisan lokasi file yang akan kita panggil sama dengan ketentuan memanggil file gambar yang telah kita
     bahas di atas.</p>
-  <a href="hello2.html">ini link menuju hello2</a>
+
+  <a href="apapun.html">ini link menuju apapun</a> <br>
+  <a href="https://bola.kompas.com/read/2019/02/26/12020058/kane-pastikan-tottenham-hotspur-kejar-gelar-liga-inggris-musim-ini"> Berita Sepak bola Inggris</a>
+
   <p>Cari tahu lebih banyak mengenai variasi penggunaan tag a href di situs w3school, lalu cobakan variasi-variasi tersebut</p>
 
   <p> Dalam proses perancangan laman web kadang kita butuh mengisikan teks untuk memberikan gambaran rancangan bentuk akhir dari laman web kita. Lorem generator dapat kita manfaatkan untuk membuat rangkaian kalimat lorem sebagai dummy konten teks
@@ -120,6 +130,7 @@
       <li>Unordered list</li>
       <li>Ordered list</li>
     </ol>
+
 
   </p>
   <p>Di bawah ini adalah contoh unordered list</p>
@@ -158,6 +169,8 @@
     <li>list keempat</li>
     <li>list kelima</li>
   </ol>
+
+
   <p>Penomeran ordered list dapat kita atur nomor awalnya tidak harus selalu mulai dari angka 1.</p>
   <ol start="110">
     <!-- ordered list -->
@@ -169,6 +182,12 @@
   </ol>
 
   <!--Berikut adalah tag untuk menandai suatu bagian dokumen web sebagai pasangan istilah dan deskripsinya. Tag <dl> menandai suatu bagian sebagai description list. Tag tersebut selalu digunakan berdampingan dengan tag <dt> (defines terms/names) untuk menandai istilah yang akan dideskripsikan lalu bagian deskripsinya sendiri diapit tag <dd> (description). -->
+
+<dl>
+  <dt>istilah</dt>
+  <dd>penjelasan istilah</dd>
+</dl>
+
   <dl>
     <!-- tag pembuka description list -->
     <dt>
@@ -194,9 +213,13 @@
   </blockquote>
 
   <q>short quotation</q>
+
+
   <pre>
   bagian ini disebut pre-formated text,
-      maksudnya ruang kosong atau ganti baris dalam kode akan ditampilkan
+      maksudnya ruang kosong atau
+
+               ganti baris dalam kode akan ditampilkan
 
 
                        apa adanya
@@ -204,17 +227,23 @@
   <p>bagian ini disebut pre-formated text, maksudnya ruang kosong atau
 
 
-    ganti baris dalam kode akan ditampilkan
+    ganti baris
 
 
-    apa adanya
-  </p>
+    dalam kode akan ditampilkan
+
+
+    apa adanya</p>
+
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit labore fugiat laudantium nihil. Libero dolor consequatur cupiditate expedita accusamus, at distinctio quas obcaecati maxime maiores dignissimos, soluta earum repellendus atque optio
     praesentium accusantium assumenda voluptate ipsam nulla, quam sint numquam quis necessitatibus architecto! Dolorum tenetur amet, porro eveniet dignissimos ipsa laborum odio recusandae error possimus sapiente deserunt, laudantium magni debitis
     distinctio tempora accusantium, unde facere asperiores. Incidunt distinctio perspiciatis sapiente mollitia ab eligendi ullam dignissimos aliquam similique, perferendis libero modi, delectus, molestias ex veniam eos nostrum. Aliquam, esse nemo
     dolorem, architecto error mollitia, eaque laboriosam accusamus consequatur facilis consequuntur ex?</p>
+
+
   <figure>
     <img src="image/Struktur_file_tree.png" alt="Gambar struktur folder dan file suatu server web">
+
     <figcaption>fig 1. Ini adalah ilustrasi struktur pohon folder dan file pada suatu server web.</figcaption>
   </figure>
 
@@ -249,7 +278,8 @@
     <nav> Tag untuk menandai suatu bagian sebagai area menu navigasi.</nav>
   </article>
   <br>
-  <em>menandai bagian teks yang perlu penekanan khusus. Fungsi utama bukan hanya tampilan visual khusus tapi juga agar mesin (browser) tahu bahwa bagian ini memerlukan perhatian/penekanan khusus. Berfungsi misalnya sebagai penanda bagi aplikasi screen reader</em>
+  <em>menandai bagian teks yang perlu penekanan khusus. Fungsi utama bukan hanya tampilan visual khusus tapi juga agar mesin (browser) tahu bahwa bagian ini memerlukan perhatian/penekanan khusus. Berfungsi misalnya sebagai penanda bagi aplikasi
+    screen reader</em>
   <br><br>
   <strong>Strong importance</strong>
 
@@ -285,6 +315,31 @@
 
   <div class="tabel">
     <h2>HTML Table</h2>
+
+<table> <!-- ni tag pembuka table -->
+  <tr> <!-- row pertama diisi dengan table header-->
+    <th>No Urut</th>
+    <th>NIM</th>
+    <th>Nama Mahasiswa</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1234567</td>
+    <td>Saya</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>98765432</td>
+    <td>Dia</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>65325678</td>
+    <td>Kamu</td>
+  </tr>
+</table> <!-- ni tag penutup table -->
+
+<br><br>
 
     <table>
       <tr>
